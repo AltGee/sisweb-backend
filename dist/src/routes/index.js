@@ -11,4 +11,3 @@ apiRouter.get('/', (req, res) => {
     res.send('Hello World!');
 });
 exports.default = apiRouter;
-//# sourceMappingURL=index.js.map

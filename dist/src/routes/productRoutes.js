@@ -18,4 +18,3 @@ productRouter.delete('/', (req, res) => {
     res.send(`Deleting the product ${req.body.id}`);
 });
 exports.default = productRouter;
-//# sourceMappingURL=productRoutes.js.map
