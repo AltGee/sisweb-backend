@@ -53,7 +53,8 @@ const getAllProducts = (req, res) => {
 exports.getAllProducts = getAllProducts;
 /// Get products by Id 
 const getProductById = (req, res) => {
-    product_1.Product.findByPk(req.params.id)
+    const id = Number(req.params.id);
+    product_1.Product.findByPk(id)
         .then((data) => {
         return res.status(200).json({
             status: "success",

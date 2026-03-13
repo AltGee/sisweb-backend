@@ -1,5 +1,6 @@
 import { Sequelize } from "sequelize-typescript";
-import { Product } from "../models/product";
+import { Tier } from "../models/tier";
+import { Empresa } from "../models/empresa";
 
 const connection = new Sequelize({
   database: "sisweb_db",
@@ -8,7 +9,8 @@ const connection = new Sequelize({
   password: "HDK#$%Ljkwerff.89",
   host: "localhost",
   port: 5432,
-  models: [Product]
+  models: [Tier, Empresa],
+  logging: console.log
 });
 
 async function connectionDB() {

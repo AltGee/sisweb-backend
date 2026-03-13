@@ -1,7 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const sequelize_typescript_1 = require("sequelize-typescript");
-const product_1 = require("../models/product");
+const tier_1 = require("../models/tier");
+const empresa_1 = require("../models/empresa");
 const connection = new sequelize_typescript_1.Sequelize({
     database: "sisweb_db",
     dialect: "postgres",
@@ -9,7 +10,8 @@ const connection = new sequelize_typescript_1.Sequelize({
     password: "HDK#$%Ljkwerff.89",
     host: "localhost",
     port: 5432,
-    models: [product_1.Product]
+    models: [tier_1.Tier, empresa_1.Empresa],
+    logging: console.log
 });
 async function connectionDB() {
     try {
